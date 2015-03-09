@@ -137,9 +137,9 @@
         //,allHtmlEnabled:false //提交到后台的数据是否包含整个html字符串
         //iframeUrlMap
         //dialog内容的路径 ～会被替换成URL,垓属性一旦打开，将覆盖所有的dialog的默认路径
-        //,iframeUrlMap:{
-        // 'anchor':'~/dialogs/anchor/anchor.html',
-        // }
+        ,iframeUrlMap:{
+          'anchor': URL + 'dialogs/anchor/anchor.html',
+        }
         //insertorderedlist
         //有序列表的下拉配置,值留空时支持多语言自动识别，若配置值，则以此值为准
 //        ,'insertorderedlist':{
