@@ -8061,7 +8061,7 @@ UE.Editor.defaultOptions = function(editor){
                 me._serverConfigLoaded = false;
 
                 configUrl && UE.ajax.request(configUrl,{
-                    'method': 'POST',
+                    'method': 'GET',
                     'dataType': isJsonp ? 'jsonp':'',
                     'onsuccess':function(r){
                         try {
@@ -16279,6 +16279,7 @@ UE.ui = baidu.editor.ui = {};
             var layer = document.getElementById('edui_fixedlayer');
             for (var i = 0, node; node = list[i++];) {
                 domUtils.addClass(node, theme);
+            }
             }
             domUtils.addClass(el, theme);
             if(layer){
