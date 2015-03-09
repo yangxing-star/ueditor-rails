@@ -77,7 +77,8 @@
         ,getMovieUrl:URL+"php/getMovie.php"                   //视频数据获取地址
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
-        ,toolbars:[["fontfamily","fontsize","undo","redo","insertorderedlist","insertimage","emotion","insertvideo","preview"]]
+        //,toolbars: [["fontfamily","fontsize","undo","redo","insertorderedlist","insertimage","emotion","insertvideo","preview"]]
+        ,toolbars: [["undo","redo","forecolor","bold","italic","underline","backcolor","insertunorderedlist","insertorderedlist","simpleupload","attachment","justifyleft","justifycenter","justifyright","justifyjustify","horizontal","link","unlink"]]
         //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
         ,labelMap:{
             'anchor':'', 'undo':''
