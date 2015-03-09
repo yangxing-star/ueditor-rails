@@ -8063,7 +8063,7 @@ UE.Editor.defaultOptions = function(editor){
                 configUrl && UE.ajax.request(configUrl,{
                     'method': 'GET',
                     'dataType': isJsonp ? 'jsonp':'',
-                    'onsuccess': function(r){
+                    'onsuccess':function(r){
                         try {
                             var config = isJsonp ? r:eval("("+r.responseText+")");
                             utils.extend(me.options, config);
@@ -15729,7 +15729,7 @@ UE.plugin.register('simpleupload', function (){
 
                 /* 判断后端配置是否没有加载成功 */
                 if (!me.getOpt('imageActionName')) {
-                    alert(me.getLang('autoupload.errorLoadConfig'));
+                    errorHandler(me.getLang('autoupload.errorLoadConfig'));
                     return;
                 }
                 // 判断文件格式是否错误
@@ -16279,7 +16279,6 @@ UE.ui = baidu.editor.ui = {};
             var layer = document.getElementById('edui_fixedlayer');
             for (var i = 0, node; node = list[i++];) {
                 domUtils.addClass(node, theme);
-            }
             }
             domUtils.addClass(el, theme);
             if(layer){
