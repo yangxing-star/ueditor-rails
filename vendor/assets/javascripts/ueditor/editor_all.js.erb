@@ -6733,7 +6733,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
         }else{
             utils.loadFile(document, {
-                src: me.options.langPath + me.options.lang + "/" + me.options.lang + ".js",
+                // src: me.options.langPath + me.options.lang + "/" + me.options.lang + ".js",
+                src: "<%= asset_path('ueditor/lang/zh-cn/zh-cn') %>",
                 tag: "script",
                 type: "text/javascript",
                 defer: "defer"
@@ -20425,9 +20426,9 @@ UE.ui = baidu.editor.ui = {};
     UE.ui.Editor = function (options) {
         var editor = new UE.Editor(options);
         editor.options.editor = editor;
-        //var editor_path = editor.options.themePath + editor.options.theme + "/css/ueditor.css";
         utils.loadFile(document, {
-            href: "<%= asset_path('ueditor/lang/zh-cn/zh-cn') %>",
+            // href: editor.options.themePath + editor.options.theme + "/css/ueditor.css",
+            href: "<%= asset_path('ueditor/themes/default/css/ueditor') %>",
             tag: "link",
             type: "text/css",
             rel: "stylesheet"
