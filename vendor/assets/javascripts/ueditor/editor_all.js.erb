@@ -20425,9 +20425,9 @@ UE.ui = baidu.editor.ui = {};
     UE.ui.Editor = function (options) {
         var editor = new UE.Editor(options);
         editor.options.editor = editor;
-        var editor_path = editor.options.themePath + editor.options.theme + "/css/ueditor.css";
+        //var editor_path = editor.options.themePath + editor.options.theme + "/css/ueditor.css";
         utils.loadFile(document, {
-            href: "<%= editor_path %>",
+            href: "<%= asset_path('ueditor/lang/zh-cn/zh-cn') %>",
             tag: "link",
             type: "text/css",
             rel: "stylesheet"
