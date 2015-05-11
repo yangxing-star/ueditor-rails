@@ -27,7 +27,7 @@
     window.UEDITOR_CONFIG = {
 
         //为编辑器实例添加一个路径，这个不能被注释
-        UEDITOR_HOME_URL: '/assets/ueditor'
+        UEDITOR_HOME_URL: URL
 
         // 服务器统一请求接口路径
         , serverUrl: "/utils/ueditor_upload"
@@ -216,7 +216,7 @@
     };
 
     function getUEBasePath(docUrl, confUrl) {
-
+        console.log(getBasePath(docUrl || self.document.URL || self.location.href, confUrl || getConfigFilePath()));
         return getBasePath(docUrl || self.document.URL || self.location.href, confUrl || getConfigFilePath());
 
     }
