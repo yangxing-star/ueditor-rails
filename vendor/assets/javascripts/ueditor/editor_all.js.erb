@@ -20425,11 +20425,12 @@ UE.ui = baidu.editor.ui = {};
     UE.ui.Editor = function (options) {
         var editor = new UE.Editor(options);
         editor.options.editor = editor;
+        var editor_path = editor.options.themePath + editor.options.theme + "/css/ueditor.css";
         utils.loadFile(document, {
-            href:editor.options.themePath + editor.options.theme + "/css/ueditor.css",
-            tag:"link",
-            type:"text/css",
-            rel:"stylesheet"
+            href: "<%= editor_path %>",
+            tag: "link",
+            type: "text/css",
+            rel: "stylesheet"
         });
 
         var oldRender = editor.render;
