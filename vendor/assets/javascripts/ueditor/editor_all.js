@@ -20425,6 +20425,7 @@ UE.ui = baidu.editor.ui = {};
     UE.ui.Editor = function (options) {
         var editor = new UE.Editor(options);
         editor.options.editor = editor;
+        alert(editor.options.themePath);
         utils.loadFile(document, {
             href: editor.options.themePath + editor.options.theme + "/css/ueditor.css",
             tag: "link",
